@@ -1,1 +1,63 @@
+# Mars Weather Analysis Project
 
+## Overview
+This project involves scraping, analyzing, and visualizing data from Mars to better understand its climate and environment. By leveraging web scraping techniques and data analysis tools, we explore key aspects of Mars weather, including minimum temperatures, atmospheric pressure, and the length of a Martian year.
+
+The project is divided into two main deliverables:
+1. **Scraping titles and previews from Mars news articles.**
+2. **Scraping and analyzing Mars weather data, including generating insights and visualizations.**
+
+---
+
+## Deliverables
+
+### 1. Mars News Scraping
+Using Splinter and BeautifulSoup, we scraped the latest news articles from the [Mars News Site](https://redplanetscience.com/). For each article, we extracted:
+- **Title:** The headline of the news article.
+- **Preview:** A short summary of the article.
+
+The data was stored in a list of dictionaries with the following format:
+```python
+[
+    {
+        'title': "NASA's MAVEN Observes Martian Light Show Caused by Major Solar Storm",
+        'preview': "For the first time in its eight years orbiting Mars, NASA’s MAVEN mission witnessed two different types of ultraviolet aurorae simultaneously, the result of solar storms that began on Aug. 27."
+    },
+    ...
+]
+2. Mars Weather Data Analysis
+We scraped weather data from the Mars Temperature Data Site. The data was assembled into a Pandas DataFrame and analyzed to answer the following key questions:
+
+Key Questions and Findings
+
+What are the coldest and warmest months on Mars?
+Coldest Month: Month 3, with an average minimum temperature of -83°C.
+Warmest Month: Month 8, with an average minimum temperature of -68°C.
+Which months have the lowest and highest atmospheric pressure?
+Lowest Atmospheric Pressure: Month 6, with an average of 600 Pa.
+Highest Atmospheric Pressure: Month 9, with an average of 910 Pa.
+How many terrestrial days exist in a Martian year?
+The length of a Martian year is approximately 687 Earth days, based on cyclic temperature patterns observed across sols.
+Visualizations
+
+1. Average Minimum Temperature by Martian Month
+A bar chart showing the average minimum temperature for each Martian month highlights the seasonal variations:
+
+2. Atmospheric Pressure by Martian Month
+A bar chart illustrating the average atmospheric pressure for each month demonstrates significant seasonal pressure fluctuations:
+
+3. Daily Minimum Temperature Over Time
+A line plot of minimum daily temperatures over Martian sols illustrates the cyclical nature of Mars’ temperature:
+
+Tools and Libraries
+
+This project uses the following tools and libraries:
+
+Python Libraries:
+Splinter: For automated browsing.
+BeautifulSoup: For HTML parsing.
+Pandas: For data manipulation and analysis.
+Matplotlib: For creating visualizations.
+Websites Scraped:
+Mars News Site
+Mars Temperature Data
